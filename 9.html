@@ -1,0 +1,27 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+      <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+      <py-config>
+          - autoclose_loader: true
+          - runtimes:
+            - src: "https://cdn.jsdelivr.net/pyodide/dev/full/pyodide.js"
+              name: pyodide-dev
+              lang: python
+    </py-config>
+      <py-env>
+    - pandas
+      </py-env>
+    </head>
+
+  <body>
+    <py-script>
+    import pandas as pd
+    l1 = [1,2,3,4,5]
+    l2 = ['a','b','c','d','e']
+    data = pd.DataFrame(l1,l2)
+    data_html = data.to_html()
+    print(data_html)
+    </py-script>
+  </body>
+</html>
