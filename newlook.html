@@ -1,0 +1,23 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+      <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+      <py-env>
+     - pandas
+      </py-env>
+    </head>
+  <body>
+	<div id="test"></div>
+    <div id="test2"></div>
+	<py-script output="test2">
+import pandas as pd
+data = {
+"calories": [420, 380, 390],
+"duration": [50, 40, 45]
+}
+df = pd.DataFrame(data)
+print(df.to_html())
+	</py-script>
+  </body>
+</html>
+
